@@ -34,6 +34,12 @@
     <Filter Include="Header Files\testing">
       <UniqueIdentifier>{29283361-de2a-40b7-9c44-bf6efc18168e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{108edd02-5e6f-4345-a8a3-e01837022775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Meshes">
+      <UniqueIdentifier>{7931dc39-a6fa-4aed-a213-5db171378af8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

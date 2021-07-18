@@ -4,9 +4,6 @@
 #include "mesh.h"
 #include <vector>
 
-
-#define _CRT_SECURE_NO_WARNINGS 1
-
 using namespace std;
 Mesh ObjParser::parse(string path)
 {
@@ -17,17 +14,18 @@ Mesh ObjParser::parse(string path)
 	{
 		Mesh m;
 		string line = "";
-		
+		char dl[] = " ";
+		vector<char*> tk;
 		while (getline(file, line))
 		{
+				
+				tk = tokenize(line, dl);
 
-			if (line[0] == '#') {
-				//ignore commented lines
-			}
-			else 
-			{
-				char dl[] = " ";
-				vector<char*> tk = tokenize(line, dl);
+				for (int iTokens = 0; iTokens < tk.size(); iTokens++)
+				{
+					cout << tk[iTokens] << ", ";
+				}
+				cout << "\n";
 
 				if (tk[0] == "o")
 				{
@@ -43,9 +41,6 @@ Mesh ObjParser::parse(string path)
 					//if we dont recognize the instruction, just skip it
 				}
 
-
-
-			}
 			
 			
 
@@ -65,7 +60,8 @@ Mesh ObjParser::parse(string path)
 
 vector<char*> tokenize(string str, char* delim)
 {
-	char* l;
+	
+	char l[128] = "";
 	strcpy(l, str.c_str());
 	vector<char*> tokens;
 

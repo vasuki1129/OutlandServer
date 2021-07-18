@@ -24,6 +24,8 @@ void Mesh::AddVertex(float x, float y, float z)
 
 void Mesh::DebugPrint()
 {
+
+	cout << name << "\n";
 	cout << "[\n";
 
 	for (int iVert = 0; iVert < this->vertices.size(); iVert++)

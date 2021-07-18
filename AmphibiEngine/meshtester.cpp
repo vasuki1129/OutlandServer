@@ -6,6 +6,7 @@
 int main(int argc, char** argv)
 {
 	ObjParser p;
-	p.parse("C:/Models/sphere.obj");
+	Mesh m = p.parse("C:\\Models\\sphere.obj");
+	m.DebugPrint();
 
 }
